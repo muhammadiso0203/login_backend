@@ -7,7 +7,7 @@ async function bootstrap() {
   dotenv.config();
 
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors();
   const config = new DocumentBuilder()
     .setTitle('Login API')
     .setDescription('Foydalanuvchi login ro‘yxati va CRUD amallari')
